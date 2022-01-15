@@ -24,7 +24,7 @@ schema_view = get_schema_view(
     openapi.Info(
         title="APP API",
         default_version='v1',
-        description="Test description",
+        description="social media api",
         terms_of_service="https://www.ourapp.com/policies/terms/",
         contact=openapi.Contact(email="contact@expenses.local"),
         license=openapi.License(name="Test License"),
@@ -36,7 +36,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth/', include('authentication.urls')),
+    path('authenticate/', include('authentication.urls')),
     path('social_auth/', include(('social_auth.urls', 'social_auth'),
                                  namespace="social_auth")),
     path('', schema_view.with_ui('swagger',
