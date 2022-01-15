@@ -15,7 +15,7 @@ class AllPostsAPIView(generics.ListAPIView):
     queryset = Post.objects.all()
     serializer_class = AllPostsSerializer
     def get_queryset(self):
-        return self.queryset.filter(user=self.request.user)
+        return self.queryset.filter(user=self.request.user).order_by('created_at')
 
 # Create your views here.
 class UserProfileAPIView(APIView):
