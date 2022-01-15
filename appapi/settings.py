@@ -107,10 +107,10 @@ CORS_ORIGIN_REGEX_WHITELIST = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'api_db',
-        'USER':'postgres',
-        'PASSWORD':'potterhead30',
-        'HOST':'localhost',
+        'NAME': 'd9hug5cspdqpim',
+        'USER':'psbizpttgtuvtp',
+        'PASSWORD':'6a15c79b611f00358adb62f03fad9ecb93527a6ad48cdc08b4a45a0f9a23aa10',
+        'HOST':'ec2-34-230-198-12.compute-1.amazonaws.com',
         'PORT':'5432'
 
     }
