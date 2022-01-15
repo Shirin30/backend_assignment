@@ -44,9 +44,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'drf_yasg',
     'authentication',
-    'communities', 
-    'taggit',
-    'taggit_serializer'
+    'social',
 ]
 
 SWAGGER_SETTINGS = {
@@ -108,10 +106,10 @@ CORS_ORIGIN_REGEX_WHITELIST = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd9hug5cspdqpim',
-        'USER':'psbizpttgtuvtp',
-        'PASSWORD':'6a15c79b611f00358adb62f03fad9ecb93527a6ad48cdc08b4a45a0f9a23aa10',
-        'HOST':'ec2-34-230-198-12.compute-1.amazonaws.com',
+        'NAME': 'd9srb7th7f77rf',
+        'USER':'kimrcvgjeooaof',
+        'PASSWORD':'d4ef7d6f5d873be5a21d91eb2e9c9a2e7ec7da243564d4f460530f0638388ce4',
+        'HOST':'ec2-34-205-46-149.compute-1.amazonaws.com',
         'PORT':'5432'
 
     }
