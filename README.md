@@ -1,4 +1,4 @@
-Income Expenses API
+SOCIAL API
 
 ## Installation steps
 
@@ -15,3 +15,7 @@ Income Expenses API
 6. Migrate existing db tables by running `python manage.py migrate`
 
 7. Run the django development server using `python manage.py runserver`
+
+The application looks like 
+ 
+![image](https://user-images.githubusercontent.com/63365275/149649038-6528e0ee-ec86-4a58-89d7-45d5ae30db8b.png)
