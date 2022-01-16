@@ -4,7 +4,16 @@ from rest_framework.response import Response
 from .renderers import UserRenderer
 
 
-class RegisterView(generics.GenericAPIView):
+class LoginAPIView(generics.GenericAPIView):
+    serializer_class = LoginSerializer
+
+    def post(self, request):
+        serializer = self.serializer_class(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class RegisterAPIView(generics.GenericAPIView):
 
     serializer_class = RegisterSerializer
     renderer_classes = (UserRenderer,)
@@ -16,15 +25,6 @@ class RegisterView(generics.GenericAPIView):
         serializer.save()
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-
-class LoginAPIView(generics.GenericAPIView):
-    serializer_class = LoginSerializer
-
-    def post(self, request):
-        serializer = self.serializer_class(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class LogoutAPIView(generics.GenericAPIView):
